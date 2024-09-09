@@ -51,7 +51,7 @@ class UserController extends AbstractController
 
         http_response_code(HttpStatusEnum::SEE_OTHER->value);
 
-        $_SESSION['success'] = 'cadastro efetuado com sucesso!';
+        $_SESSION['success'] = 'Registration completed successfully!';
 
         header("Location: ".$this->request::getBaseUrl()."/users", true);
     }
@@ -73,7 +73,7 @@ class UserController extends AbstractController
 
         http_response_code(HttpStatusEnum::OK->value);
 
-        $_SESSION['success'] = 'cadastro atualizado com sucesso!';
+        $_SESSION['success'] = 'Registration updated successfully!';
 
         header("Location: ".$this->request::getBaseUrl()."/users", true);
     }
@@ -85,7 +85,7 @@ class UserController extends AbstractController
 
         http_response_code(HttpStatusEnum::NO_CONTENT->value);
 
-        $_SESSION['success'] = 'cadastro excluído com sucesso!';
+        $_SESSION['success'] = 'Registration deleted successfully!';
 
         header("Location: ".$this->request::getBaseUrl()."/users", true);
     }
